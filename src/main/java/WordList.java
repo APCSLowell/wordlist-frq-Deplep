@@ -10,13 +10,22 @@ public class WordList
 
   public int numWordsOfLength(int len)
   {
-    /* to be implemented in part (a) */
-    
+    for(int i = 0; i < myList.size(); i += 1){
+      if(myList.get(i).length == len){
+        count += 1;
+      }
+    }
+    return count;
   }
 
   public void removeWordsOfLength(int len)
   {
-    /* to be implemented in part (b) */
-
+    while(i < myList.size()){
+      if(myList.get(i).length() == len){
+        myList.remove(i);
+      } else {
+        i += 1;
+      }
+    }
   }
 }
